@@ -115,13 +115,6 @@ Promise1.prototype.then = function (onFullfilled, onRejected) {
         })
     }
     return promiseElse
-}
+};
 
-new Promise1(function (resolve, reject) {
-    resolve(1)
-})
-.then(function (value) {
-    console.log(value)
-}, function (err) {
-    console.log({err})
-})
+module.exports = Promise1
