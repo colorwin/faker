@@ -61,10 +61,12 @@ class Watcher {
         this.data = data
         this.key = key
         this.cb = cb
+        this.value = this.data[key]
         Dep.target = null
     }
     update() {
-        this.cb(this.data[this.key])
+        this.value = this.data[this.key]
+        this.cb(this.value)
     }
 
     before () {
