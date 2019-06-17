@@ -12,8 +12,7 @@ function coinExchangeArr (coins, amount) {
         if (newAmount >= 0) {
             lastMinArr = coinExchangeArr(coins, newAmount)
             if (
-                (lastMinArr.length + 1 < minArr.length || !minArr.length)
-              && (lastMinArr.length || !newAmount)
+                lastMinArr.length + 1 < minArr.length || !minArr.length
             ) {
                 minArr = lastMinArr.concat(coins[i])
             }
@@ -22,6 +21,6 @@ function coinExchangeArr (coins, amount) {
     cache[amount] = minArr
     return minArr
 }
-const coins = [ 5, 10, 25, 1]
-const result = coinExchangeArr(coins, 36)
+const coins = [1, 3, 4]
+const result = coinExchangeArr(coins, 6)
 console.log(result)
