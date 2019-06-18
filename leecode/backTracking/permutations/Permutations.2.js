@@ -20,11 +20,6 @@ function backTrack (result, tempList, nums) {
         tempList.push(nums[i])
         backTrack(result, tempList, nums)
         tempList.pop()
-                        console.log({
-                            i,
-                            tempList,
-                            result
-                        })
     }
 }
 
