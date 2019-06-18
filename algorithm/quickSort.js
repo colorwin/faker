@@ -9,7 +9,7 @@ function quickSort (arr, l, r) {
     if (r <= l) {
         return 
     }
-    console.log(arr, l, r, 'before')
+    // console.log(arr, l, r, 'before')
     let i = l
     let j = r
     const index = Math.floor((l + r) / 2)
@@ -27,9 +27,9 @@ function quickSort (arr, l, r) {
             j--
         }
     }
-    console.log(arr, i, 'after')
-    quickSort(arr, l, j)
-    quickSort(arr, j + 1, r)
+    // console.log(arr, i, 'after')
+    quickSort(arr, l, i)
+    quickSort(arr, i - 1, r)
 }
 
 const arr = [3,5,1,6,4,7,2]
