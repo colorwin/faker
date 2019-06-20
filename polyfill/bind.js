@@ -1,15 +1,17 @@
-Function.prototype.bind2 = function (content = window, ...rest) {
-    const fn = this
-    function fNOP () {}
-    function fBound (...rest2) {
-
-        console.log(fNOP.prototype.isPrototypeOf(fBound.prototype))
-        return fn.apply(this instanceof fNOP ? this : content, rest.concat(rest2))
+if (!Function.prototype.bind2) {
+    Function.prototype.bind2 = function (content) {
+        var fn = this
+        var rest = Array.prototype.slice(arguments, 1)
+        function fNOP () {}
+        function fBound () {
+            var rest2 = Array.prototype.slice.call(arguments)
+            return fn.apply(this instanceof fNOP ? this : content, rest.concat(rest2))
+        }
+        // Object.setPrototypeOf(fBound.prototype, fn.prototype)
+        fNOP.prototype = fn.prototype
+        fBound.prototype = new fNOP()
+        return fBound
     }
-    // Object.setPrototypeOf(fBound.prototype, fn.prototype)
-    fNOP.prototype = fn.prototype
-    fBound.prototype = new fNOP()
-    return fBound
 }
 
 const foo = {
