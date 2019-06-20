@@ -1,4 +1,4 @@
-Function.prototype.call2 = function (content = window, ...rest) {
+Function.prototype.call2 = function (content) {
     content.fn = this
     const result = content.fn(...rest)
     delete content.fn
