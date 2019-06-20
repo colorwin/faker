@@ -26,10 +26,10 @@ define-properties@^1.1.3:
   dependencies:
     object-keys "^1.0.12"
 
-diff@1.4.0:
-  version "1.4.0"
-  resolved "https://registry.npm.taobao.org/diff/download/diff-1.4.0.tgz#7f28d2eb9ee7b15a97efd89ce63dcfdaa3ccbabf"
-  integrity sha1-fyjS657nsVqX79ic5j3P2qPMur8=
+diff@3.5.0:
+  version "3.5.0"
+  resolved "https://registry.npm.taobao.org/diff/download/diff-3.5.0.tgz#800c0dd1e0a8bfbc95835c202ad220fe317e5a12"
+  integrity sha1-gAwN0eCov7yVg1wgKtIg/jF+WhI=
 
 es-abstract@^1.12.0:
   version "1.13.0"
